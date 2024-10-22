@@ -1,0 +1,341 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-completada: #4CAF50;
+    --color-progreso: #2196F3;
+    --color-espera: #ff0707;
+    --color-background: #f4f4f4;
+    --color-text: #333;
+    --color-header: #333;
+    --color-header-text: #fff;
+    --color-footer: #333;
+    --color-footer-text: #fff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--color-header);
+    color: var(--color-header-text);
+    padding: 1rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo i {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 1rem;
+}
+
+.back-link{
+    text-decoration: none;
+    color: #fff;
+}
+.back-link:hover{
+  color: #2196F3;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+
+.nav-links a {
+    color: var(--color-header-text);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-progreso);
+}
+
+main {
+    padding: 2rem;
+    flex-grow: 1;
+}
+
+.task-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.task-option {
+    flex-basis: calc(33.33% - 2rem);
+    text-align: center;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: var(--color-text);
+    transition: transform 0.3s ease;
+}
+
+.task-option:hover {
+    transform: translateY(-5px);
+    
+}
+.task-section { 
+    background-color: #fff; 
+    border-radius: 5px; 
+    box-shadow: 0 9px 34px rgb(45 44 44 / 55%);
+    padding: 1rem; 
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    -webkit-transition: transform 0.3s ease, box-shadow 0.3s ease;
+    -moz-transition: transform 0.3s ease, box-shadow 0.3s ease;
+    -ms-transition: transform 0.3s ease, box-shadow 0.3s ease;
+    -o-transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.task-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgb(45 44 44 / 65%);
+}
+
+.task-cards { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 1rem; 
+}
+
+.task-card { 
+    background-color: #f9f9f9; 
+    border-radius: 5px; 
+    padding: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
+}
+
+.task-card h3 { 
+    margin-bottom: 0.5rem; 
+    color: #444; }
+
+.fecha{ margin-top: 20px; 
+    font-size: 12px; 
+    color: grey; }
+
+
+.urgency-importancia {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+    
+.importancia-baja {
+    background-color: #8bc34a;
+    color: white;
+}
+
+.importancia-medium {
+    background-color: #ffa000;
+    color: white;
+}
+
+.importancia-high {
+    background-color: #d32f2f;
+    color: white;
+    animation: pulse 2s infinite;
+}
+
+
+.completed {
+    border-top: 5px solid var(--color-completada);
+}
+
+.in-progress {
+    border-top: 5px solid var(--color-progreso);
+}
+
+.waiting {
+    border-top: 5px solid var(--color-espera);
+}
+
+.waiting2 {
+    border-top: 5px solid #ffa000;
+}
+
+p.waiting2{
+    text-decoration:underline;
+    font-size: 10px;
+}
+
+.waiting3 {
+    border-top: 5px solid #8bc34a;
+}
+
+footer {
+    background-color: var(--color-footer);
+    color: var(--color-footer-text);
+    padding: 2rem 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    margin-bottom: 1rem;
+}
+
+.footer-section h3 {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: var(--color-footer-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--color-progreso);
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (width <= 710px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Ocultar el título h1 */
+    .navbar h1 {
+        display: none;
+    }
+
+    /* Asegurar que el icono sea visible */
+    .navbar .icon {
+        display: block;
+    }
+    
+    .nav-links {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .nav-links li {
+        margin: 0;
+    }
+
+    /* Ocultar el texto de los enlaces */
+    .nav-links a span {
+        display: none;
+    }
+
+    /* Mostrar los iconos de los enlaces */
+    .nav-links a::before {
+        content: '';
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    /* Ejemplos de iconos para cada enlace */
+    .nav-links a[href="#home"]::before {
+        background-image: url('path/to/home-icon.svg');
+    }
+
+    .nav-links a[href="#about"]::before {
+        background-image: url('path/to/about-icon.svg');
+    }
+
+    .nav-links a[href="#services"]::before {
+        background-image: url('path/to/services-icon.svg');
+    }
+
+    .nav-links a[href="#contact"]::before {
+        background-image: url('path/to/contact-icon.svg');
+    }
+
+    .task-option {
+        flex-basis: 100%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
