@@ -257,7 +257,7 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-@media (width <= 710px) {
+@media (width <= 711px) {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
